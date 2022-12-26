@@ -1,0 +1,15 @@
+<div class="window">
+  <div class="game-box">
+    <div class="tiles-container">
+      <div class="tiles" *ngFor="let data of this.boxData; let index = index">
+        <div
+          [class.d-none]="data.value == 0"
+          [style.background]="getTileBG(data.value)"
+          [id]="'tile' + index"
+        >
+          <p>{{ data.value }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
